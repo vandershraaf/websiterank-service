@@ -20,4 +20,9 @@ public class TimeTest {
         final Time time = new Time(est);
         assertEquals(est.getDisplayName(), time.getTimezone());
     }
+    
+    // Only a dummy method
+    public void dummy(){
+    	
+    }
 }
