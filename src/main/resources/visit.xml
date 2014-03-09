@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:visit xmlns:tns="http://www.example.org/visit" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/visit visit.xsd ">
+  <tns:website>
+    <tns:name>tns:name</tns:name>
+  </tns:website>
+  <tns:date>
+    <tns:date>2001-01-01</tns:date>
+  </tns:date>
+  <tns:visitCount>0</tns:visitCount>
+</tns:visit>

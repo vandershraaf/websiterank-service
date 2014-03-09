@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.example.org/visit" 
+xmlns:tns="http://www.example.org/visit" 
+elementFormDefault="qualified">
+
+	<element name="visit">
+    	<complexType>
+    		<sequence>
+    		    <element name="website" type="tns:Website"></element>
+    		    <element name="date" type="tns:Date"></element>
+    		    <element name="visitCount" type="int"></element>
+    		</sequence>
+    	</complexType>
+    </element>
+    
+    <complexType name="Website">
+    	<sequence>
+    		<element name="name" type="string"></element>
+    	</sequence>
+    </complexType>
+    
+    
+    <complexType name="Date">
+    	<sequence>
+    		<element name="date" type="date"></element>
+    	</sequence>
+    </complexType>
+    
+
+</schema>
