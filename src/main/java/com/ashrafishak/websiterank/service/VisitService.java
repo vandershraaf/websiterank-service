@@ -9,12 +9,19 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import com.ashrafishak.websiterank.dao.VisitsDAO;
 import com.ashrafishak.websiterank.entity.*;
 
 @Path("visits") 
 @Produces(MediaType.APPLICATION_JSON)
 public class VisitService {
 
+	@GET
+	@Produces (MediaType.APPLICATION_XML)
+	public Visits getAllVisit(){
+		return VisitsDAO.getWebsiteVisits();
+	}
+	
 	@GET
 	@Path("/test")
 	@Produces(MediaType.APPLICATION_XML)

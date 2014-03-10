@@ -45,4 +45,12 @@ public class Visit {
 		this.visitCount = visitCount;
 	}
 
+	@Override
+	public String toString() {
+		return "Visit [website=" + website.getName() + ", date=" + date.getDateVisited() + ", visitCount="
+				+ visitCount + "]";
+	}
+	
+	
+
 }

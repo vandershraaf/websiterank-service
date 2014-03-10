@@ -12,9 +12,12 @@ public class Visits {
 	private ArrayList<Visit> visitList;
 	
 	public Visits(){
-		
+		this.visitList = new ArrayList<Visit>();
 	}
 
+	public void addVisit(Visit visit){
+		this.visitList.add(visit);
+	}
 	public ArrayList<Visit> getVisitList() {
 		return visitList;
 	}
