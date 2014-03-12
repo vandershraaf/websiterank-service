@@ -95,7 +95,7 @@ public class VisitsDAO {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();
 		String strQuery = "SELECT w.name, d.date_visited, v.visit_count FROM visit v, date_visited d, website w " + 
-					      "WHERE d.id = v.date_visited_id AND w.id = v.website_id";
+					      "WHERE d.id = v.date_visited_id AND w.id = v.website_id ORDER BY v.visit_count DESC";
 		Query query = session.createSQLQuery(strQuery);
 		Visits visits = new Visits();
 		List<Object[]> queryResult = (List<Object[]>) query.list();
