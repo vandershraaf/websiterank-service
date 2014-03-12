@@ -15,7 +15,6 @@ import com.ashrafishak.websiterank.entity.DateVisited;
 public class DateService {
 	
 	@GET
-	@Produces(MediaType.APPLICATION_XML)
 	public List<DateVisited> getAllDateVisited(){
 		return DateVisitedDAO.getAllDateVisited();
 	}

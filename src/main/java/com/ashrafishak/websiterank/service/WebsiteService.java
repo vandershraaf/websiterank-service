@@ -15,7 +15,6 @@ import com.ashrafishak.websiterank.entity.Website;
 public class WebsiteService {
 
 	@GET
-	@Produces(MediaType.APPLICATION_XML)
 	public List<Website> getAllWebsite(){
 		return WebsiteDAO.getAllWebsite();
 	}
