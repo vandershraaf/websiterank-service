@@ -21,7 +21,6 @@ public class VisitService {
 
 	// path: /service/visits/
 	@GET
-	@Produces (MediaType.APPLICATION_XML)
 	public Visits getAllVisit(){
 		return VisitsDAO.getAllWebsiteVisits();
 	}
@@ -31,7 +30,6 @@ public class VisitService {
 	// path: /service/visits/date/{date}?sortBy=[visit_asc, visit_desc, website_asc, website_desc]
 	@GET
 	@Path("/date/{date}")
-	@Produces(MediaType.APPLICATION_XML)
 	public Visits getVisitsByDate(@PathParam("date") String date, @DefaultValue("visit_desc") @QueryParam("sortBy") String sortBy){
 		// TODO: We might want to avoid these if statements LOL
 		SortBy type = SortBy.VISIT_DESC;
@@ -51,7 +49,6 @@ public class VisitService {
 	// path: /service/visits/website/{website}?sortBy=[visit_asc, visit_desc, date_asc, date_desc]
 	@GET
 	@Path("/website/{website_name}")
-	@Produces(MediaType.APPLICATION_XML)
 	public Visits getVisitsByWebsite(@PathParam("website_name") String name, @DefaultValue("visit_desc") @QueryParam("sortBy") String sortBy){
 		// TODO: We might want to avoid these if statements LOL
 		SortBy type = SortBy.VISIT_DESC;
