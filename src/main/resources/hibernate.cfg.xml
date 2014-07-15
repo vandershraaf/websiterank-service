@@ -4,14 +4,26 @@
 "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
  
 <hibernate-configuration>
-<session-factory>
-    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://us-cdbr-east-05.cleardb.net/heroku_b35e4c04b0114f0</property>
-    <property name="hibernate.connection.username">b09b1a370df806</property>
-    <property name="hibernate.connection.password">045d9208</property>
-    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-    <property name="show_sql">true</property>
-    <property name="format_sql">true</property>
-    <mapping resource="websiterank.hbm.xml" />
-</session-factory>
+<!--  
+	<session-factory>
+	    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+	    <property name="hibernate.connection.url">jdbc:mysql://us-cdbr-east-05.cleardb.net/heroku_b35e4c04b0114f0</property>
+	    <property name="hibernate.connection.username">b09b1a370df806</property>
+	    <property name="hibernate.connection.password">045d9208</property>
+	    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+	    <property name="show_sql">true</property>
+	    <property name="format_sql">true</property>
+	    <mapping resource="websiterank.hbm.xml" />
+	</session-factory>
+	-->
+	<session-factory>
+	    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+	    <property name="hibernate.connection.url">jdbc:mysql://localhost/call_transfer_db</property>
+	    <property name="hibernate.connection.username">root</property>
+	    <property name="hibernate.connection.password"></property>
+	    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+	    <property name="show_sql">true</property>
+	    <property name="format_sql">true</property>
+	    <mapping resource="websiterank.hbm.xml" />
+	</session-factory>
 </hibernate-configuration>

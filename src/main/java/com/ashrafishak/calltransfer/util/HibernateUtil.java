@@ -1,4 +1,4 @@
-package com.ashrafishak.websiterank.util;
+package com.ashrafishak.calltransfer.util;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
