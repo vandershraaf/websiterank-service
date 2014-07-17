@@ -20,6 +20,7 @@ import com.ashrafishak.calltransfer.dao.TransferDAO;
 import com.ashrafishak.calltransfer.dao.UserDAO;
 import com.ashrafishak.calltransfer.entity.Account;
 import com.ashrafishak.calltransfer.entity.Agent;
+import com.ashrafishak.calltransfer.entity.PostRequest;
 import com.ashrafishak.calltransfer.entity.PostResponse;
 import com.ashrafishak.calltransfer.entity.Transfers;
 import com.ashrafishak.calltransfer.entity.User;
@@ -33,12 +34,14 @@ public class TransferService {
 	// date form param in YYYY-MM-DD
 	@POST
 	@Path("/transfer/add")
-	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-	public PostResponse putSingleTransfer(@FormParam("account") String acctNum,
-										  @FormParam("agent") String agent,
-										  @FormParam("date") String date,
-										  @FormParam("user") String user,
-										  @FormParam("apiToken") String apiToken){
+	@Consumes(MediaType.APPLICATION_JSON)
+	public PostResponse putSingleTransfer (PostRequest request){
+		System.out.println(request);
+		String acctNum = request.getAccount();
+		String user = request.getUser();
+		String apiToken = request.getApiToken();
+		String agent = request.getAgent();
+		String date = request.getDate();
 		Session sess = HibernateUtil.getSessionFactory().openSession();
 		PostResponse pr = null;
 		if (UserDAO.validateUser(user, apiToken, sess)){
@@ -66,7 +69,6 @@ public class TransferService {
 		sess.close();
 		HibernateUtil.shutdown();
 		return pr;
-
 		
 		
 	}
